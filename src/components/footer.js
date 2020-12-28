@@ -7,6 +7,8 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import axios from 'axios';
 
+const url = process.env.NODE_ENV === 'development' ? '/api/form' : 'https://api-data-cv.herokuapp.com/api/form';
+
 class Footer extends React.Component {
 
     constructor(props){
@@ -77,7 +79,7 @@ class Footer extends React.Component {
             const subject = fields["subject"];
             const message = fields["message"];
 
-            axios.post('/api/form', { name, email, subject, message })
+            axios.post(url, { name, email, subject, message })
                 .then(res => this.setState({showNot: true}))
                 .catch(err => console.log('Login: ', err));
 
