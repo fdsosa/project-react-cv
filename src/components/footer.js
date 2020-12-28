@@ -7,7 +7,7 @@ import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import axios from 'axios';
 
-const url = process.env.NODE_ENV === 'development' ? '/api/form' : 'https://api-data-cv.herokuapp.com/api/form';
+const url = process.env.NODE_ENV === 'development' ? '/api/form' : 'https://react-cv-api.herokuapp.com/api/form';
 
 class Footer extends React.Component {
 
