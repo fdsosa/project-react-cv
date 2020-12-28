@@ -1,0 +1,120 @@
+.headerContainer {
+    display: flex;
+    width: 100%;
+    height: 12vh;
+
+    .headerTitle {
+        display: flex;
+        width: 35%;
+        height: 100%;
+        align-items: center;
+        padding-left: 1rem;
+        font-size: 2rem;
+        color: #182153;
+        box-sizing: border-box;
+
+        h3 {
+            font-size: 30px;
+            font-weight: 400;
+        }
+    }
+    
+    .headerLinks {
+        display: flex;
+        width: 65%;
+        height: 100%;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        font-size: 2rem;
+        color: #182153;
+        box-sizing: border-box;
+
+        .listLinks {
+            display: flex;
+            font-size: 15px;
+            font-weight: 400;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 70%;
+            justify-content: flex-end;
+            align-items: center;
+
+            li {
+                display: flex;
+                text-decoration: none;
+                color: #182153;
+                height: 100%;
+                align-items: center;
+                transition: all ease .3s;
+                border-radius: 5px;
+
+                .navLink {
+                    padding: 0 1.5rem;
+                    height: 100%;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+                    display: flex;
+                }
+
+                &:hover {
+                    background-color: #FFF1F1;
+                    color: #111944;
+                }
+            }
+        }
+    } 
+}
+
+.homeColor {
+    background-color: #FFFFFF;
+}
+
+.gitColor {
+    background-color: #182153;
+    .headerTitle {
+        a{
+            color: #FFFFFF; 
+        }
+    }
+    .headerLinks {
+        .listLinks {
+            li {
+                a{
+                    color: #FFFFFF;
+                }
+
+                &:hover {
+                    background-color: #0e1435;
+                    color: #FFF1F1;
+                }    
+            }
+        }
+    }            
+}
+
+a {
+    text-decoration: none;
+    color: #182153;
+}
+
+@media only screen and (max-width: 650px) {
+    .headerContainer {          
+        .headerTitle {
+            width: 70%;
+            h3 {
+                font-size: 25px;
+                font-weight: 400;
+            }
+        }   
+        .headerLinks {
+            width: 30%;
+            .listLinks {
+                display: none;
+            }
+        }
+    }        
+}
