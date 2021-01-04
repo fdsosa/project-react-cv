@@ -20,25 +20,29 @@
         .profileInfo {
             display: flex;
             flex-direction: column;
-            width: 298px;
-            height: 95%;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
 
             .profilePicture {
-                width: 100%;
-                min-height: 250px;
-                height: 50%;
-                background-image: url(./../../assets/adult-attractive-beautiful-beauty-415829.webp);
-                background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
-                background-origin: content-box;
+                width: 300px;
+                height: 300px;
                 box-sizing: border-box;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
 
             .profileData {
                 padding: 1rem 3rem;
+                box-sizing: border-box;
                 color: #182153;
                 background-color: #f1f1f1;
+                width: 300px;
+                height: 300px;
 
                 h2 {
                     margin: 0;
@@ -78,7 +82,13 @@
             .profileInfo {
                 width: 240px;
 
+                .profilePicture {
+                    width: 250px;
+                    height: 250px;
+                }
                 .profileData {
+                    width: 250px;
+                    height: 300px;
                     padding: 1rem 2rem;
     
                     h2 {
@@ -94,45 +104,7 @@
         }
     }                
 }
-
-//XS
-@media only screen and (max-height: 660px) {
-    .profileBg {    
-        .filter {    
-            .profileInfo {    
-                .profilePicture {
-                    width: 100%;
-                    min-height: 200px;
-                    height: 40%;
-                }
-    
-                .profileData {
-                    padding: .5rem 3rem;
-                    margin: auto;
-                    color: #182153;
-    
-                    h2 {
-                        font-size: 21px;
-                    }
-    
-                    h4 {
-                        font-size: 17px;
-                        margin-bottom: .8rem;
-                        text-align: center;
-                    }
-    
-                    ul {
-                        font-size: 14px;
-    
-                        .itemText {
-                            margin-bottom: .8rem;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}    
+   
 
 //L
 @media only screen and (min-width: 800px) {
@@ -142,22 +114,24 @@
 
             .profileInfo {
                 flex-direction: row;
-                width: 80%;
-                height: 84%;
+                align-items: flex-end;
+                justify-content: center;
+                width: 100%;
+                height: 100%;
                 min-height: 300px;
     
                 .profilePicture {
-                    width: 50%;
-                    height: 100%;
+                    width: 400px;
+                    height: 400px;
                 }
 
                 .profileData {
                     display: flex;
                     flex-direction: column;
                     padding: 1rem 2rem;
-                    width: 50%;
-                    min-height: 400px;
-                    height: 100%;
+                    width: 400px;
+                    height: 400px;
+                    margin: 0;
                     box-sizing: border-box;
                     justify-content: center;
                     align-items: flex-start;
@@ -180,12 +154,36 @@
     }                   
 }
 
+@media only screen and (min-width: 1100px) {
+    .profileBg {
+        .filter {
+            .profileInfo {    
+                .profilePicture {
+                    width: 500px;
+                    height: 500px;
+                }
+
+                .profileData {
+                    width: 500px;
+                    height: 500px;
+                }
+            }
+        }
+    }
+}
+
 //XL
 @media only screen and (min-width: 1400px) {
     .profileBg {
         .filter {
             .profileInfo {
+                .profilePicture {
+                    width: 600px;
+                    height: 600px;
+                }
                 .profileData {
+                    width: 600px;
+                    height: 600px;
                     padding-left: 4rem;
 
                     h2 {

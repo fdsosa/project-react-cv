@@ -82,7 +82,7 @@
 //L
 @media only screen and (min-width: 800px) {
     .socialDiv {
-        width: 80%;
+        width: 800px;
         min-height: 9vh;
     
         ul {            
@@ -108,9 +108,16 @@
     }
 }    
 
+@media only screen and (min-width: 1100px) {
+    .socialDiv {
+        width: 1000px;
+    }
+}
+
 //XL
 @media only screen and (min-width: 1400px) {
     .socialDiv {
+            width: 1200px;
             height: 8vh;    
         ul {            
             li {

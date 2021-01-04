@@ -1,17 +1,32 @@
 import React from 'react';
 import './styles/profile.scss';
 import Fade from 'react-reveal/Fade';
+import imageProfile from '../assets/adult-attractive-beautiful-beauty-415829.webp';
 
 class Profile extends React.Component {
+    constructor(props) {
+        super(props);
+        this.imageDiv = React.createRef()
+    }
+
+    componentDidMount() {
+        /*console.log(this.imageDiv.current.offsetWidth);
+        console.log(this.imageDiv.current.offsetHeight);
+        console.log((this.imageDiv.current.offsetHeight / this.imageDiv.current.offsetWidth) * 2000);
+        let aspectRadio = (this.imageDiv.current.offsetHeight / this.imageDiv.current.offsetWidth) * 100;
+        this.imageDiv.current.style.paddingBottom = `${aspectRadio}%`*/
+    }
+    
+
     render () {
         return (
             <>
                 <div className="profileBg">
                     <div className="filter">
                         <div className="profileInfo">
-                            <Fade left>    
-                                <div className="profilePicture"></div>
-                            </Fade>  
+                            <div className="profilePicture">
+                                <img src={imageProfile} alt="Profile picture"/>
+                            </div>
                             <Fade right>    
                                 <div className="profileData">
                                     <h2>Federico Sosa</h2>
