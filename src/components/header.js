@@ -7,35 +7,33 @@ class Header extends React.Component {
 	render () {
 		return (
 			<>
-				<div className={this.props.location.pathname === '/' ? "headerContainer homeColor" : "headerContainer gitColor"}>
-					<div className="headerTitle">
-						<Link to="/"><h3 className="titleLink">Federico Sosa</h3></Link>
-					</div>
-					<div className="headerLinks">
-						<ul className="listLinks">
-							<li className="itemList">
-								<Link className="navLink" to="/">
+				<nav className={this.props.location.pathname === '/' ? "navbar navbar-expand-lg nav-container homeColor" : "navbar navbar-expand-lg nav-container gitColor"}>
+					<div className="container-fluid py-2">
+						<Link to="/" className="navbar-brand"><h4 className="m-0">Federico Sosa</h4></Link>
+						<ul className="collapse navbar-collapse me-auto mb-2 mb-lg-0 justify-content-lg-end">
+							<li className="nav-item mx-3">
+								<Link to="/">
 									HOME
 								</Link>
 							</li>
-							<li className="itemList">
-								<a className="navLink" href="/#skills">
+							<li className="nav-item mx-3">
+								<a href="/#skills">
 									SKILLS
 								</a>
 							</li>
-							<li className="itemList">
-								<Link className="navLink" to="/github">
+							<li className="nav-item mx-3">
+								<Link to="/github">
 									GITHUB
 								</Link>
 							</li>
-							<li className="itemList">
-								<a className="navLink" href="/#contact">
+							<li className="nav-item mx-3">
+								<a href="/#contact">
 									CONTACT
 								</a>
 							</li>
 						</ul>
 					</div>
-				</div>
+				</nav>
 			</>
 		);
 	}

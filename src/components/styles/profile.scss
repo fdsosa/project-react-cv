@@ -1,209 +1,64 @@
 .profileBg {
-    width: 100%;
-    height: 88vh;
-    background-image: url(./../../assets/iphone-notebook-pen-working-34088.webp);
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-origin: content-box;
-    box-sizing: border-box;
+  min-height: 88vh;
+  background-image: url(./../../assets/iphone-notebook-pen-working-34088.webp);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-origin: content-box;
 
-    .filter {
-        display: flex;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(24, 33, 83, 0.568);
-        align-items: center;
-        justify-content: center;
+  .profileData {
+    color: #182153;
+    background-color: #f1f1f1;
 
-        .profileInfo {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            width: 100%;
-            height: 100%;
-
-            .profilePicture {
-                width: 300px;
-                height: 300px;
-                box-sizing: border-box;
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-
-            .profileData {
-                padding: 1rem 3rem;
-                box-sizing: border-box;
-                color: #182153;
-                background-color: #f1f1f1;
-                width: 300px;
-                height: 300px;
-
-                h2 {
-                    margin: 0;
-                    font-weight: 400;
-                }
-
-                h4 {
-                    margin-top: .2rem;
-                    margin-bottom: 1rem;
-                    font-weight: 700;
-                }
-
-                ul {
-                    padding: 0;
-                    margin: 0;
-                    list-style: none;
-                    font-size: 15px;
-
-                    .itemTitle {
-                        font-weight: 600;
-                    }
-
-                    .itemText {
-                        font-weight: 200;
-                        margin-bottom: 1rem;
-                    }
-                }
-            }
-        }
+    h2 {
+      text-align: left;
+      margin: 0;
+      font-weight: 400;
     }
-}
 
-//XS
-@media only screen and (max-width: 320px) {
-    .profileBg {
-        .filter {
-            .profileInfo {
-                width: 240px;
-
-                .profilePicture {
-                    width: 250px;
-                    height: 250px;
-                }
-                .profileData {
-                    width: 250px;
-                    height: 300px;
-                    padding: 1rem 2rem;
-    
-                    h2 {
-                        font-size: 1.4rem;
-                    }
-    
-                    h4 {
-                        font-size: 1rem;
-                        text-align: center;
-                    }
-                }
-            }
-        }
-    }                
-}
-   
-
-//L
-@media only screen and (min-width: 800px) {
-    .profileBg {
-        .filter {
-            align-items: flex-end;
-
-            .profileInfo {
-                flex-direction: row;
-                align-items: flex-end;
-                justify-content: center;
-                width: 100%;
-                height: 100%;
-                min-height: 300px;
-    
-                .profilePicture {
-                    width: 400px;
-                    height: 400px;
-                }
-
-                .profileData {
-                    display: flex;
-                    flex-direction: column;
-                    padding: 1rem 2rem;
-                    width: 400px;
-                    height: 400px;
-                    margin: 0;
-                    box-sizing: border-box;
-                    justify-content: center;
-                    align-items: flex-start;
-                    padding-left: 6rem;
-
-                    h2 {
-                        font-size: 1.8rem;
-                    }
-    
-                    h4 {
-                        font-size: 1.2rem;
-                    }
-    
-                    ul {
-                        font-size: 18px;
-                    }    
-                }    
-            }
-        }
-    }                   
-}
-
-@media only screen and (min-width: 1100px) {
-    .profileBg {
-        .filter {
-            .profileInfo {    
-                .profilePicture {
-                    width: 500px;
-                    height: 500px;
-                }
-
-                .profileData {
-                    width: 500px;
-                    height: 500px;
-                }
-            }
-        }
+    h4 {
+      margin-top: 0.2rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
     }
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      font-size: 15px;
+
+      .itemTitle {
+        font-weight: 600;
+      }
+
+      .itemText {
+        font-weight: 200;
+        margin-bottom: 1rem;
+      }
+    }
+  }
 }
 
-//XL
-@media only screen and (min-width: 1400px) {
-    .profileBg {
-        .filter {
-            .profileInfo {
-                .profilePicture {
-                    width: 600px;
-                    height: 600px;
-                }
-                .profileData {
-                    width: 600px;
-                    height: 600px;
-                    padding-left: 4rem;
-
-                    h2 {
-                        font-size: 2.6rem;
-                    }
-    
-                    h4 {
-                        font-size: 1.6rem;
-                        margin-bottom: 2rem;
-                    }
-    
-                    ul {
-                        font-size: 1.5rem;
-
-                        .itemText {
-                            margin-bottom: 1.5rem;
-                        }
-                    }    
-                }    
-            }
-        }
+@media (max-width: 576px) { 
+  .profileData {
+    h2 {
+      font-size: 1.7rem;
     }
+
+    h4 {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (min-width: 1750px) {
+  .profileBg {
+    .profilePicture,
+    .profileData {
+      flex: 0 0 66.666667%;
+      max-width: 66.666667%;
+    }
+  }
 }
