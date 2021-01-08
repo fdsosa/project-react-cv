@@ -1,10 +1,13 @@
+.skillsContainer {
+    background-color: #FFFFFF;
+}
+
 .skillsDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 2rem 2rem;
-    background-color: #FFFFFF;
     box-sizing: border-box;
 
     h2 {

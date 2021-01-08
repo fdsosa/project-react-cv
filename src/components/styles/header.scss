@@ -1,11 +1,27 @@
 .nav-container {
     min-height: 10vh;
-    a{
-        color: #182153;
-
+    a {
         &:hover {
             color: #182153;
             text-decoration: none;
         }
+    }
+}
+
+.homeColor {
+    background-color: #f1f1f1;
+    a, h4 {
+        color: #182153;
+    }
+}
+
+.gitColor {
+    background-color: #182153;
+    a, h4 {
+        color: #f1f1f1;
+    }
+
+    a:hover {
+        color: #fff;
     }
 }

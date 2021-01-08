@@ -19,7 +19,7 @@ function Skills(props) {
   }, [])
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid skillsContainer">
       <div className="container-lg skillsDiv" id="skills">
         <h2>SKILLS</h2>
         <div className="barsDiv">
