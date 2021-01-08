@@ -1,38 +1,51 @@
+.personalContainer {
+    background-color:#f1f1f1;
+}
+
 .socialDiv {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
     min-height: 8vh;
-    margin: auto;
     background-color: rgb(24,33,83);
     color: #ffffff;
     box-sizing: border-box;
     z-index: 8;
 
-    ul {
+    .socialCol {
         display: flex;
-        margin: 0;
-        padding: 0;
-        list-style: none;
-        
-        li {
-            font-size: 2.1rem;
-            padding: .2rem 1.8rem;
+        flex-direction: row;
+        align-items: center;
+        background-color: rgb(24,33,83);
+        height: 8vh;
+     
+        ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            
+            li {
+                font-size: 2.1rem;
+                padding: .2rem 1.8rem;
+    
+                a {
+                    text-decoration: none;
+                    cursor: pointer;
 
-            a {
-                text-decoration: none;
-                color: #FFFFFF;
-                cursor: pointer;
+                    path {
+                        color: #FFFFFF;
+                    }
+                }
             }
         }
-    }
+    }    
 }
 
 .personalDiv {
     display: flex;
     flex-direction: column;
-    padding: 3rem 3rem;
+    padding: 3rem 6rem !important;
     background-color:#f1f1f1;
     justify-content: center;
     align-items: center;
@@ -41,6 +54,7 @@
     h3 {
         font-weight: 400;
         margin-bottom: .5rem;
+        text-align: center;
         font-size: 1.6rem;
     }
 
@@ -52,21 +66,37 @@
     }
 }
 
+@media (min-width: 1750px) {
+    .personalContainer {    
+      .socialDiv {
+        .socialCol {
+        flex: 0 0 133.333334%;
+        max-width: 133.333334%;
+      }
+    }
+
+    .personalDiv {
+        padding: 9rem 2rem !important;
+    }
+  }
+}
+
 //XS
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 570px) {
     .socialDiv {
         min-height: 7vh;
-    
-        ul {            
-            li {
-                font-size: 1.9rem;
-                padding: .1rem 1.4rem;
+        .socialCol {
+            ul {            
+                li {
+                    font-size: 1.9rem;
+                    padding: .1rem 1.4rem;
+                }
             }
         }
     }
     
     .personalDiv {
-        padding: 3rem 2rem;
+        padding: 3rem 2rem !important;
     
         h3 {
             font-size: 1.3rem;
@@ -80,15 +110,14 @@
 }    
 
 //L
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 992px) {
     .socialDiv {
-        width: 800px;
-        min-height: 9vh;
-    
-        ul {            
-            li {
-                font-size: 1.9rem;
-                padding: .1rem 1.4rem;
+        .socialCol { 
+            ul {            
+                li {
+                    font-size: 1.9rem;
+                    padding: .1rem 1.4rem;
+                }
             }
         }
     }
@@ -96,7 +125,7 @@
     .personalDiv {
         width: 60%;
         margin: auto;
-        padding: 5rem 3rem;
+        padding: 5rem 5rem !important;
     
         h3 {
             font-size: 1.6rem;
@@ -108,21 +137,16 @@
     }
 }    
 
-@media only screen and (min-width: 1100px) {
-    .socialDiv {
-        width: 1000px;
-    }
-}
-
 //XL
-@media only screen and (min-width: 1400px) {
+@media only screen and (min-width: 1200px) {
     .socialDiv {
-            width: 1200px;
-            height: 8vh;    
-        ul {            
-            li {
-                font-size: 2.2rem;
-                padding: .1rem 1.9rem;
+        height: 8vh;    
+        .socialCol {
+            ul {            
+                li {
+                    font-size: 2.2rem;
+                    padding: .1rem 1.9rem;
+                }
             }
         }
     }

@@ -4,6 +4,7 @@ import './index.css';
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom';
 import Home from './components/home';
 import GithubRepos from './components/github-repos';
+import './assets/script.js';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const app = (

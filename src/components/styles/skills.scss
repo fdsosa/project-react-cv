@@ -2,6 +2,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2rem 2rem;
     background-color: #FFFFFF;
     box-sizing: border-box;
@@ -13,6 +14,8 @@
     }
 
     .barsDiv {
+        width: 80%;
+
         h5{
             color: #182153;
             margin-bottom: .7rem;
@@ -20,9 +23,8 @@
             font-size: 1rem;
         }
 
-        .meter { 
-            height: 30px;  /* Can be anything */
-            position: relative;
+        .progress { 
+            height: 35px;
             background: #f1f1f1;
             -moz-border-radius: 25px;
             -webkit-border-radius: 25px;
@@ -30,24 +32,13 @@
             box-shadow: inset 0 -1px 1px rgba(255,255,255,0.3);
             margin-bottom: 2.5rem;
 
-            span {
+            .progress-bar {
                 display: flex;
-                height: 100%;
-                border-top-right-radius: 8px;
-                border-bottom-right-radius: 8px;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
+                flex-direction: row;
                 background-color: #182153;
-                background-image: linear-gradient(
-                  center bottom,
-                  #2b377a 37%,
-                  #182153 69%
-                );
                 box-shadow: 
                   inset 0 2px 9px  rgba(255,255,255,0.3),
                   inset 0 -2px 6px rgba(0,0,0,0.4);
-                position: relative;
-                overflow: hidden;
                 color: rgba(241, 241, 241, 0.808);
                 text-align: center;
                 align-items: center;
@@ -60,61 +51,41 @@
     }
 }
 
-//L
-@media only screen and (min-width: 800px) {
+//XS
+@media only screen and (max-width: 570px) {
     .skillsDiv {    
         h2 {
-            margin-bottom: 1.5rem;
+            font-size: 1.7rem;
         }
-    
+    }
+}
+
+//S
+@media only screen and (max-width: 992px) {
+    .skillsDiv {    
         .barsDiv {
-            width: 60%;
-            margin: auto;
-            h5{
-                color: #182153;
-                margin-bottom: .7rem;
-                margin-left: .5rem;
+            .progress { 
+                height: 40px;
             }
-
-            .meter { 
-                height: 35px;
-                margin-bottom: 3.5rem;
-            }    
         }
-    }        
-} 
-
+    }
+}
 //XL
 @media only screen and (min-width: 1400px) {
-    .skillsDiv {
-        justify-content: center;
-        padding: 5rem 2rem;
-        background-color: #FFFFFF;
-    
+    .skillsDiv {    
+        padding: 5rem 5rem;
+
         h2 {
-            color: #182153;
-            text-align: center;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 2.1rem;
         }
     
-        .barsDiv {
-            width: 60%;
-            margin: auto;
-            h5{
-                font-size: 1.2rem;
-                margin-bottom: .7rem;
-                margin-left: .5rem;
-            }
-
-            .meter { 
-                height: 40px;
-                margin-bottom: 3.5rem;
-
-                span {
-                    font-size: 16px;
-                }    
-            }    
+        h5 {
+            font-size: 1.3rem !important;
         }
-    }   
+
+        .barsDiv {
+            justify-content: center;
+            width: 90%;
+        }
+    }
 }    
