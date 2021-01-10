@@ -53,6 +53,13 @@
   }
 }
 
+@media (max-width: 992px) { 
+  .profileBg {
+    margin-top: 10vh;
+    background-attachment: scroll;
+  }
+}
+
 @media (min-width: 1750px) {
   .profileBg {
     .profilePicture,

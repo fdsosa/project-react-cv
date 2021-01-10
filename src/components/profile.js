@@ -26,8 +26,8 @@ class Profile extends React.Component {
   render() {
     return (
       <>
-        <div className="container-fluid d-flex align-items-center align-items-lg-end profileBg py-3 py-lg-0">
-          <div className="container-lg h-100">
+        <div className="container-fluid d-flex align-items-center align-items-lg-end profileBg">
+          <div className="container-lg py-4 py-lg-0 h-100">
             <div className="row flex-column flex-lg-row flex-nowrap justify-content-center align-items-center align-items-lg-end h-100">
               <div className="col-10 col-sm-8 col-md-5 col-lg-6 col-xl-6 d-block p-0 profilePicture" ref={this.imageDiv} id="image-div">
                 <img src={imageProfile} className="img-fluid" alt="Profile picture" />
