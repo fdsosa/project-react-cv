@@ -25,7 +25,7 @@ class GithubContent extends React.Component {
 
   renderRepos(repos) {
     return (
-      <div className="repository col-10 col-sm-4 col-lg-3 m-4 p-0 d-flex flex-column">
+      <div className="repository col-10 col-sm-4 col-lg-3 m-4 p-0 d-flex flex-column" key={repos.name}>
         <div className="repoTitle d-flex justify-content-start align-items-center p-2 text-start">
           <h4 className="m-0 px-2">{repos.name}</h4>
         </div>

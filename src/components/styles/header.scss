@@ -1,5 +1,14 @@
 .nav-container {
     min-height: 10vh;
+    position: fixed !important;
+    top: 0;
+    opacity: 1;
+    z-index: 6;
+    width: 100%;
+    transition: all 0.3s ease-out;
+    border-bottom: 1px solid #080d24cb;
+    box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.165);
+
     a {
         &:hover {
             color: #182153;
@@ -35,6 +44,8 @@
 
 .homeColor {
     background-color: #f1f1f1;
+    border-bottom: 1px solid #cbcedf67;
+
     a, h4 {
         color: #182153;
     }
@@ -166,13 +177,8 @@
   }
 }
 
-
-//S
-@media only screen and (max-width: 992px) {
-    nav {
-        position: fixed !important;
-        top: 0;
-        z-index: 6;
-        width: 100%;
+@media (max-width: 992px) {
+    .nav-container {
+        position: relative !important;
     }
 }

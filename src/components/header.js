@@ -1,17 +1,42 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import './styles/header.scss';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
 	constructor(props) {
 		super(props);
-		this.toggleClass= this.toggleClass.bind(this);
+		this.navbar = createRef();
+		this.toggleClass = this.toggleClass.bind(this);
+		this.handleNavigation = this.handleNavigation.bind(this);
 		this.state = {
-			active: false
+			active: false,
+			initialY: null
 		}
 	}
 
-	toggleClass() {
+	componentDidMount() {
+		this.setState({ initialY: window.scrollY });
+		window.addEventListener('scroll', this.handleNavigation);
+	}
+
+	componentWillUnmount() {
+		this.setState({ initialY: null });
+		window.removeEventListener('scroll', this.handleNavigation);
+	}
+
+	handleNavigation = () => {
+    if (this.state.initialY > window.scrollY && window.innerWidth >= 995) {
+			this.navbar.current.style.top = '0px';
+			this.navbar.current.style.opacity = '1';
+    } else if (this.state.initialY < window.scrollY && window.innerWidth >= 995) {
+			this.navbar.current.style.top = `-${this.navbar.current.offsetHeight + 5}px`;
+			this.navbar.current.style.opacity = `0`;
+    }
+		this.setState({ initialY: window.scrollY });
+	};
+
+
+	toggleClass = () => {
 		const currentState = this.state.active;
 		this.setState({ active: !currentState });
 	}	
@@ -19,7 +44,10 @@ class Header extends React.Component {
 	render () {
 		return (
 			<>
-				<nav className={this.props.location.pathname === '/' ? "navbar navbar-collapse navbar-expand-lg nav-container p-0 homeColor" : "navbar navbar-collapse navbar-expand-lg nav-container p-0 gitColor"}>
+				<nav 
+					className={this.props.location.pathname === '/' ? "navbar navbar-collapse navbar-expand-lg nav-container p-0 homeColor" : "navbar navbar-collapse navbar-expand-lg nav-container p-0 gitColor"}
+					ref={this.navbar}	
+				>
 					<div className="container-fluid align-items-baseline align-items-lg-center">
 						<Link to="/" className="navbar-brand"><h4 className="m-0 p-3">Federico Sosa</h4></Link>
 						<ul className="collapse navbar-collapse me-auto mb-2 mb-lg-0 p-3 justify-content-lg-end">
@@ -44,7 +72,7 @@ class Header extends React.Component {
 								</a>
 							</li>
 						</ul>
-						<button className="p-3" type="button" aria-expanded="false" aria-controls="show-menu">
+						<button className="p-3 d-lg-none" type="button" aria-expanded="false" aria-controls="show-menu">
 							<div id="nav-icon1" className={this.state.active ? 'open' : ''} onClick={this.toggleClass}>
 								<span></span>
 								<span></span>
