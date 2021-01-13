@@ -1,6 +1,5 @@
 import React from 'react';
 import './styles/footer.scss';
-import Fade from 'react-reveal/Fade';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
@@ -138,16 +137,14 @@ class Footer extends React.Component {
                 <li className="itemTitle">Email:</li>
                 <li className="itemText">mail@info.com</li>
               </ul>
-              <Fade bottom>
-                <hr />
-                <div className="socialNets d-flex justify-content-center justify-content-lg-start mt-2">
-                  <ul>
-                    <li><a href="https://github.com/fdsosa" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
-                    <li><a href="https://www.facebook.com/fede.gorsac35/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                    <li><a href="https://www.linkedin.com/in/federico-sosa-026685153/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
-                  </ul>
-                </div>
-              </Fade>
+              <hr />
+              <div className="socialNets d-flex justify-content-center justify-content-lg-start mt-2">
+                <ul>
+                  <li><a href="https://github.com/fdsosa" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
+                  <li><a href="https://www.facebook.com/fede.gorsac35/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faFacebookF} /></a></li>
+                  <li><a href="https://www.linkedin.com/in/federico-sosa-026685153/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faLinkedinIn} /></a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

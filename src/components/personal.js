@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 import { faFacebookF } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
-import Fade from 'react-reveal/Fade';
 
 class Personal extends React.Component {
   render() {

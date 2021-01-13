@@ -1,23 +1,7 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import './styles/skills.scss';
-import Zoom from 'react-reveal/Zoom';
 
 function Skills(props) {
-  const example = useRef();
-  /*const [showBar, setShowBar] = useState(true);
-
-  const { useOnScreen } = props;
-  const [setRef, visible] = useOnScreen({ threshold: 0.2 });
-  
-  if (visible) {
-    setShowBar(false);
-  }*/
-
-  useEffect(() => {
-    console.log(example.current.style);
-    example.current.style.width = '100%';
-  }, [])
-
   return (
     <div className="container-fluid skillsContainer">
       <div className="container-lg skillsDiv" id="skills">
@@ -25,7 +9,7 @@ function Skills(props) {
         <div className="barsDiv">
           <h5>HTML</h5>
           <div className="progress">
-            <div className="progress-bar" ref={example} role="progressbar" style={{width: 70 + '%'}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            <div className="progress-bar" role="progressbar" style={{width: 70 + '%'}} aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
           </div>
           <h5>CSS</h5>
           <div className="progress">
