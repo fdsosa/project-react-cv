@@ -12,7 +12,7 @@ function Personal() {
   const [visibleSocial, setVisibleSocial] = useState(false);
   const [visibleText, setVisibleText] = useState(false);
   const options = {
-    threshold: 0.25
+    threshold: 0.5
   }
 
   useEffect(() => {
