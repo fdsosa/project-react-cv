@@ -6,12 +6,24 @@ class Header extends React.Component {
 	constructor(props) {
 		super(props);
 		this.navbar = createRef();
+		this.mobileMenuList = createRef();
+		this.mobileMenu = createRef();
 		this.toggleClass = this.toggleClass.bind(this);
 		this.handleNavigation = this.handleNavigation.bind(this);
 		this.state = {
 			active: false,
 			initialY: null
 		}
+	}
+
+	componentDidUpdate() {
+		//i do this because the menu wasnt responsive
+		let newHeight = this.mobileMenuList.current.offsetHeight + 25;
+		if (this.mobileMenu.current.classList.contains('openMenu') && this.mobileMenu.current.offsetHeight === 0) {
+			this.mobileMenu.current.style.height = `${newHeight}px`;
+		} else if (!this.mobileMenu.current.classList.contains('openMenu')) {
+			this.mobileMenu.current.style.height = "0";
+		} 
 	}
 
 	componentDidMount() {
@@ -50,24 +62,24 @@ class Header extends React.Component {
 				>
 					<div className="container-fluid align-items-baseline align-items-lg-center">
 						<Link to="/" className="navbar-brand"><h4 className="m-0 p-3">Federico Sosa</h4></Link>
-						<ul className="collapse navbar-collapse me-auto mb-2 mb-lg-0 p-3 justify-content-lg-end">
-							<li className="nav-item mx-3">
-								<Link to="/">
+						<ul className="collapse me-auto mb-lg-0">
+							<li className="nav-item d-lg-inline-block mx-1">
+								<Link className="px-4" to="/">
 									HOME
 								</Link>
 							</li>
-							<li className="nav-item mx-3">
-								<a href="/#skills">
+							<li className="nav-item d-lg-inline-block mx-1">
+								<a className="px-4" href="/#skills">
 									SKILLS
 								</a>
 							</li>
-							<li className="nav-item mx-3">
-								<Link to="/github">
+							<li className="nav-item d-lg-inline-block mx-1">
+								<Link className="px-4" to="/github">
 									GITHUB
 								</Link>
 							</li>
-							<li className="nav-item mx-3">
-								<a href="/#contact">
+							<li className="nav-item d-lg-inline-block mx-1">
+								<a className="px-4" href="/#contact">
 									CONTACT
 								</a>
 							</li>
@@ -79,12 +91,12 @@ class Header extends React.Component {
 								<span></span>
 							</div>
 						</button>
-						<div className={this.state.active ? 'headerMenu d-flex align-items-center justify-content-center openMenu' : 'headerMenu'}>
-							<ul className={this.state.active ? 'd-flex flex-column p-0 m-0 menu-container' : 'd-none menu-container'}>
-								<li className="menu-item-1 py-2 text-center"><Link to="/">HOME</Link></li>
-								<li className="menu-item-2 py-2 text-center"><a href="/#skills">SKILLS</a></li>
-								<li className="menu-item-3 py-2 text-center"><Link to="/github">GITHUB</Link></li>
-								<li className="menu-item-4 py-2 text-center"><a href="/#contact">CONTACT</a></li>
+						<div className={this.state.active ? 'headerMenu d-flex align-items-center justify-content-center openMenu' : 'headerMenu'} ref={this.mobileMenu}>
+							<ul ref={this.mobileMenuList} className={this.state.active ? 'd-flex flex-column p-0 m-0 py-1 menu-container' : 'd-none menu-container'}>
+								<li className="menu-item-1 my-1 text-center"><Link className="py-2" to="/">HOME</Link></li>
+								<li className="menu-item-2 my-1 text-center"><a className="py-2" href="/#skills">SKILLS</a></li>
+								<li className="menu-item-3 my-1 text-center"><Link className="py-2" to="/github">GITHUB</Link></li>
+								<li className="menu-item-4 my-1 text-center"><a className="py-2" href="/#contact">CONTACT</a></li>
 							</ul>
 						</div>
 					</div>
