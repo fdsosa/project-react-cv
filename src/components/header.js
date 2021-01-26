@@ -62,7 +62,7 @@ class Header extends React.Component {
 				>
 					<div className="container-fluid align-items-baseline align-items-lg-center">
 						<Link to="/" className="navbar-brand"><h4 className="m-0 p-3">Federico Sosa</h4></Link>
-						<ul className="collapse me-auto mb-lg-0">
+						<ul className="navbar-collapse collapse me-auto mb-lg-0">
 							<li className="nav-item d-lg-inline-block mx-1">
 								<Link className="px-4" to="/">
 									HOME

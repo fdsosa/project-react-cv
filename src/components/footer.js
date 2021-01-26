@@ -113,7 +113,7 @@ class Footer extends React.Component {
                 {this.state.errors["name"] &&
                   <p>{this.state.errors["name"]}</p>
                 }
-                <input type="text" name="email" placeholder="Email" onChange={this.handleChange} className={this.state.errors["email"] ? 'errorField' : ''} value={this.state.fields["email"]} />
+                <input type="email" name="email" placeholder="Email" onChange={this.handleChange} className={this.state.errors["email"] ? 'errorField' : ''} value={this.state.fields["email"]} />
                 {this.state.errors["email"] &&
                   <p>{this.state.errors["email"]}</p>
                 }
